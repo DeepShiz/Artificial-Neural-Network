@@ -1,5 +1,0 @@
-flask==1.0.2
-requests==2.19.1
-sendgrid==5.6.0
-wtforms==2.2.1
-gunicorn==19.9.0
