@@ -1,0 +1,22 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 125-022-081
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 125-022-081
+INFO:werkzeug: * Detected change in '/Users/arulkp/Desktop/alexa-skill-builder/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 125-022-081
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 125-022-081
+INFO:werkzeug:127.0.0.1 - - [10/Nov/2018 00:49:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Nov/2018 00:49:08] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Nov/2018 00:49:12] "GET /builder HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Nov/2018 00:51:55] "POST /builder HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Nov/2018 00:58:39] "GET /builder HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [10/Nov/2018 00:58:52] "POST /builder HTTP/1.1" 200 -
