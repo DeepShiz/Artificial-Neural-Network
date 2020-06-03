@@ -5,7 +5,7 @@ import random
 import pandas as pd
 
 
-learning_rate = 0.1
+learning_rate = 0.01
 lmbda = 0.01
 beta = 0.09
 layers_dims = []
