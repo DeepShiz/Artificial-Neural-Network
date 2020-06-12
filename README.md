@@ -4,14 +4,20 @@ An artificial neural network (ANN) is the piece of a computing system designed t
 ANNs have self-learning capabilities that enable them to produce better results as more data becomes available.
 
 ```markdown
-##Key points
+## Key points
 1.An artificial neural network (ANN) is the component of artificial intelligence that is meant to simulate the functioning of a human brain.
 2.Processing units make up ANNs, which in turn consist of inputs and outputs. The inputs are what the ANN learns from to produce the desired output.
 3.Backpropagation is the set of learning rules used to guide artificial neural networks.
 4.The practical applications for ANNs are far and wide, encompassing finance, personal communication, industry, education, and so on.
+
+
+
+
+
+
 ```
 
-##Understanding an Artificial Neural Network (ANN)
+## Understanding an Artificial Neural Network (ANN)
 Artificial neural networks are built like the human brain, with neuron nodes interconnected like a web. The human brain has hundreds of billions of cells called neurons. Each neuron is made up of a cell body that is responsible for processing information by carrying information towards (inputs) and away (outputs) from the brain.
 
 
@@ -25,7 +31,7 @@ During the training and supervisory stage, the ANN is taught what to look for an
 The bank wants the "fraud detected" responses to be Yes Yes Yes No, which in binary format would be 1 1 1 0. If the network’s actual output is 1 0 1 0, it adjusts its results until it delivers an output that coincides with 1 1 1 0. After training, the computer system can alert the bank of pending fraudulent transactions, saving the bank lots of money.
 
 
-##Practical Applications for Artificial Neural Networks (ANNs)
+## Practical Applications for Artificial Neural Networks (ANNs)
 Artificial neural networks are paving the way for life-changing applications to be developed for use in all sectors of the economy. Artificial intelligence platforms that are built on ANNs are disrupting the traditional ways of doing things. From translating web pages into other languages to having a virtual assistant order groceries online to conversing with chatbots to solve problems, AI platforms are simplifying transactions and making services accessible to all at negligible costs.
 
 Artificial neural networks have been applied in all areas of operations. Email service providers use ANNs to detect and delete spam from a user’s inbox; asset managers use it to forecast the direction of a company’s stock; credit rating firms use it to improve their credit scoring methods; e-commerce platforms use it to personalize recommendations to their audience; chatbots are developed with ANNs for natural language processing; deep learning algorithms use ANN to predict the likelihood of an event; and the list of ANN incorporation goes on across multiple sectors, industries, and countries.
