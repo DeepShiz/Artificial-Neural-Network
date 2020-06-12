@@ -3,18 +3,15 @@
 An artificial neural network (ANN) is the piece of a computing system designed to simulate the way the human brain analyzes and processes information. It is the foundation of artificial intelligence (AI) and solves problems that would prove impossible or difficult by human or statistical standards.
 ANNs have self-learning capabilities that enable them to produce better results as more data becomes available.
 
-```markdown
 ## Key points
-1.An artificial neural network (ANN) is the component of artificial intelligence that is meant to simulate the functioning of a human brain.
-2.Processing units make up ANNs, which in turn consist of inputs and outputs. The inputs are what the ANN learns from to produce the desired output.
+```markdown
+1.An artificial neural network (ANN) is the component of artificial intelligence that is
+meant to simulate the functioning of a human brain.
+2.Processing units make up ANNs, which in turn consist of inputs and outputs. The inputs
+are what the ANN learns from to produce the desired output.
 3.Backpropagation is the set of learning rules used to guide artificial neural networks.
-4.The practical applications for ANNs are far and wide, encompassing finance, personal communication, industry, education, and so on.
-
-
-
-
-
-
+4.The practical applications for ANNs are far and wide, encompassing finance, personal
+communication, industry, education, and so on.
 ```
 
 ## Understanding an Artificial Neural Network (ANN)
