@@ -41,6 +41,7 @@ class ANN(object):
     def __init__(self, layers_dims, learning_rate=0.1, lmbda=0.01, beta=0.09):
         self.parameters = {}
         self.grads = {}
+        self.weights = {}
         self.layers_dims = layers_dims
         self.train_cost = []
         self.val_cost = []
@@ -67,6 +68,7 @@ class ANN(object):
         for i in range(1,len(layer_dims)):
             self.parameters["W" + str(i)] = np.random.randn(layer_dims[i],layer_dims[i-1])*0.2
             self.parameters["b" + str(i)] = np.zeros(shape=(layer_dims[i],1))
+            self.weights["W" + str(i)] = [self.parameters["W" + str(i)].mean()]
 
 
         return self.parameters
@@ -125,6 +127,7 @@ class ANN(object):
             #dW = self.momentum_term(self.grads["dW" + str(i+1)], self.parameters["W" + str(i+1)])
             self.parameters["W" + str(i+1)] = self.parameters["W" + str(i+1)] - learning_rate*self.grads['dW' + str(i+1)]
             self.parameters["b" + str(i+1)] = self.parameters["b" + str(i+1)] - learning_rate*self.grads["db" + str(i+1)]
+            self.weights["W" + str(i+1)] = self.weights["W" + str(i+1)] + [self.parameters["W" + str(i+1)].mean()]
         print("up done")
         return self.parameters
 
@@ -150,7 +153,8 @@ class ANN(object):
 
             output = "Epoch %r Error %r"%(epoch+1, cost.mean())
             print(output)
-
+            
+        self.plot_weights_over_epochs()
         return parameters
 
     def split_dataset(self, data):
@@ -186,6 +190,14 @@ class ANN(object):
             ms_sum += (output[i] - predictions[i])**2
         rmse = ms_sum/len(outputs)
         return rmse
+    
+    def plot_weights_over_epochs(self):
+        for i in range(0, len(self.parameters)//2):
+            plt.title("W" + str(i+1) +" over epochs")
+            plt.xlabel("Epochs")
+            plt.ylabel("Weights")
+            plt.plot(self.weights["W" + str(i+1)])
+            plt.show()
 
 
 if(__name__ == "__main__"):
