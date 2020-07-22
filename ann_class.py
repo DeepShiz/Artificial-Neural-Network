@@ -42,6 +42,7 @@ class ANN(object):
         self.parameters = {}
         self.grads = {}
         self.weights = {}
+        self.biases = {}
         self.layers_dims = layers_dims
         self.train_cost = []
         self.val_cost = []
@@ -69,6 +70,7 @@ class ANN(object):
             self.parameters["W" + str(i)] = np.random.randn(layer_dims[i],layer_dims[i-1])*0.2
             self.parameters["b" + str(i)] = np.zeros(shape=(layer_dims[i],1))
             self.weights["W" + str(i)] = [self.parameters["W" + str(i)].mean()]
+            self.biases["b" + str(i)] = [self.parameters["b" + str(i)].mean()]
 
 
         return self.parameters
@@ -128,6 +130,7 @@ class ANN(object):
             self.parameters["W" + str(i+1)] = self.parameters["W" + str(i+1)] - learning_rate*self.grads['dW' + str(i+1)]
             self.parameters["b" + str(i+1)] = self.parameters["b" + str(i+1)] - learning_rate*self.grads["db" + str(i+1)]
             self.weights["W" + str(i+1)] = self.weights["W" + str(i+1)] + [self.parameters["W" + str(i+1)].mean()]
+            self.biases["b" + str(i+1)] = self.biases["b" + str(i+1)] + [self.parameters["b" + str(i+1)].mean()]
         print("up done")
         return self.parameters
 
@@ -155,6 +158,7 @@ class ANN(object):
             print(output)
             
         self.plot_weights_over_epochs()
+        self.plot_biases_over_epochs()
         return parameters
 
     def split_dataset(self, data):
@@ -198,6 +202,15 @@ class ANN(object):
             plt.ylabel("Weights")
             plt.plot(self.weights["W" + str(i+1)])
             plt.show()
+            
+    def plot_biases_over_epochs(self):
+        for i in range(0, len(self.parameters)//2):
+            plt.title("b" + str(i+1) +" over epochs")
+            plt.xlabel("Epochs")
+            plt.ylabel("biases")
+            plt.plot(self.biases["b" + str(i+1)])
+            plt.show()
+
 
 
 if(__name__ == "__main__"):
