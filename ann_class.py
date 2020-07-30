@@ -231,7 +231,7 @@ if(__name__ == "__main__"):
     test_x, test_y = pd.DataFrame(test[["AT","V","AP","RH"]]), pd.DataFrame([test[["PE"]]])
 
     print(train_x, len(train_x))
-    parameters = ann.train_model(train_x, train_y, epochs = 1)
+    parameters = ann.train_model(train_x, train_y, epochs = 1000)
 
     hidden_layer = ann.tanhx(np.dot(parameters["W1"],input_layer.T) + parameters["b1"])
     output_layer = ann.tanhx(np.dot(parameters["W2"],hidden_layer) + parameters["b2"])
